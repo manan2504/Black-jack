@@ -30,6 +30,161 @@
         <source src="audio/blackjack.mp3" type="audio/mp3">
     </audio>
 
+    <header class="lightgrey">
+        <div id="game-title">
+            <img src="images/blackjack-logo.png.png" alt="BLACKJACK">
+            <h1>BLACKJACK</h1>
+        </div>
+        <div class="score">
+            <p><strong>Dealer's score:</strong> <span id="dealer-score" data-score="0">-</span></p>
+        </div>
+        <div id="user-controls">
+            <button id="about" class="button yellow text-grey">About Game</button>
+            <button id="mute" class="button grey text-yellow">Mute</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="message-box-container">
+            <div class="border"></div>
+            <div id="message-box">Press <strong>Deal</strong> to begin!</div>
+        </div>
+        <div id="deck-outline" class="deck-orientation"></div>
+        <div id="deck" class="deck-orientation deck-shadow">
+            <div id="cards">
+                <img class="card-face ace" data-card-value="11" src="images/cards/ace-clubs.png">
+                <img class="card-face ace" data-card-value="11" src="images/cards/ace-diamonds.png">
+                <img class="card-face ace" data-card-value="11" src="images/cards/ace-hearts.png">
+                <img class="card-face ace" data-card-value="11" src="images/cards/ace-spades.png">
+                <img class="card-face" data-card-value="2" src="images/cards/2-clubs.png">
+                <img class="card-face" data-card-value="2" src="images/cards/2-diamonds.png">
+                <img class="card-face" data-card-value="2" src="images/cards/2-hearts.png">
+                <img class="card-face" data-card-value="2" src="images/cards/2-spades.png">
+                <img class="card-face" data-card-value="3" src="images/cards/3-clubs.png">
+                <img class="card-face" data-card-value="3" src="images/cards/3-diamonds.png">
+                <img class="card-face" data-card-value="3" src="images/cards/3-hearts.png">
+                <img class="card-face" data-card-value="3" src="images/cards/3-spades.png">
+                <img class="card-face" data-card-value="4" src="images/cards/4-clubs.png">
+                <img class="card-face" data-card-value="4" src="images/cards/4-diamonds.png">
+                <img class="card-face" data-card-value="4" src="images/cards/4-hearts.png">
+                <img class="card-face" data-card-value="4" src="images/cards/4-spades.png">
+                <img class="card-face" data-card-value="5" src="images/cards/5-clubs.png">
+                <img class="card-face" data-card-value="5" src="images/cards/5-diamonds.png">
+                <img class="card-face" data-card-value="5" src="images/cards/5-hearts.png">
+                <img class="card-face" data-card-value="5" src="images/cards/5-spades.png">
+                <img class="card-face" data-card-value="6" src="images/cards/6-clubs.png">
+                <img class="card-face" data-card-value="6" src="images/cards/6-diamonds.png">
+                <img class="card-face" data-card-value="6" src="images/cards/6-hearts.png">
+                <img class="card-face" data-card-value="6" src="images/cards/6-spades.png">
+                <img class="card-face" data-card-value="7" src="images/cards/7-clubs.png">
+                <img class="card-face" data-card-value="7" src="images/cards/7-diamonds.png">
+                <img class="card-face" data-card-value="7" src="images/cards/7-hearts.png">
+                <img class="card-face" data-card-value="7" src="images/cards/7-spades.png">
+                <img class="card-face" data-card-value="8" src="images/cards/8-clubs.png">
+                <img class="card-face" data-card-value="8" src="images/cards/8-diamonds.png">
+                <img class="card-face" data-card-value="8" src="images/cards/8-hearts.png">
+                <img class="card-face" data-card-value="8" src="images/cards/8-spades.png">
+                <img class="card-face" data-card-value="9" src="images/cards/9-clubs.png">
+                <img class="card-face" data-card-value="9" src="images/cards/9-diamonds.png">
+                <img class="card-face" data-card-value="9" src="images/cards/9-hearts.png">
+                <img class="card-face" data-card-value="9" src="images/cards/9-spades.png">
+                <img class="card-face" data-card-value="10" src="images/cards/10-clubs.png">
+                <img class="card-face" data-card-value="10" src="images/cards/10-diamonds.png">
+                <img class="card-face" data-card-value="10" src="images/cards/10-hearts.png">
+                <img class="card-face" data-card-value="10" src="images/cards/10-spades.png">
+                <img class="card-face" data-card-value="10" src="images/cards/jack-clubs.png">
+                <img class="card-face" data-card-value="10" src="images/cards/jack-diamonds.png">
+                <img class="card-face" data-card-value="10" src="images/cards/jack-hearts.png">
+                <img class="card-face" data-card-value="10" src="images/cards/jack-spades.png">
+                <img class="card-face" data-card-value="10" src="images/cards/queen-clubs.png">
+                <img class="card-face" data-card-value="10" src="images/cards/queen-diamonds.png">
+                <img class="card-face" data-card-value="10" src="images/cards/queen-hearts.png">
+                <img class="card-face" data-card-value="10" src="images/cards/queen-spades.png">
+                <img class="card-face" data-card-value="10" src="images/cards/king-clubs.png">
+                <img class="card-face" data-card-value="10" src="images/cards/king-diamonds.png">
+                <img class="card-face" data-card-value="10" src="images/cards/king-hearts.png">
+                <img class="card-face" data-card-value="10" src="images/cards/king-spades.png">
+            </div>
+            <div id="card-back">
+                <img class="card-back" src="images/card-back.png">
+            </div>
+        </div>
+        <div id="dealer-hand-container">
+            <div id="dealer-hand"></div>
+            <div id="hide-card">
+                <img class="card-back" src="images/card-back.png">
+            </div>
+        </div>
+        <div id="player-hand-container">
+            <div id="player-hand"></div>
+        </div>
+    </main>
+
+    <footer class="lightgrey">
+        <div id="start-game">
+            <button id="deal-button" class="button-round blue text-white">DEAL</button>
+        </div>
+        <div id="empty"></div>
+        <div class="score">
+            <p><strong>Player's score:</strong> <span id="player-score" data-score="0">-</span></p>
+        </div>
+        <div id="player-buttons">
+            <button id="hit-button" class="button-round green text-white">HIT</button>
+            <button id="stand-button" class="button-round red text-white">STAND</button>
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="start-new-modal" class="modal">
+
+        <!-- Modal content for deal button -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Start New Game?</h2>
+            </div>
+            <div class="modal-body">
+                <p>Your current game is in session.<br>Start a new game?</p>
+            </div>
+            <div class="modal-footer">
+                <div id="response-no">No</div>
+                <div id="response-yes">Yes</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about-modal" class="modal">
+
+        <!-- Modal content for about button -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>About Game</h2>
+
+            <h2>How to play</h2>
+            <ol>
+                <li>Press the <strong class="text-blue">Deal</strong> button to shuffle the cards and begin a new game.
+                </li>
+                <li>Press the <strong class="text-green">Hit</strong> button to add a new card to your hand.</li>
+                <li>End your turn and let the dealer play by pressing the <strong class="text-red">Stand</strong>
+                    button.</li>
+                <li>See if you managed to beat the dealer!<br><strong>Just don't go <em>bust</em> (score over 21)
+                        first!</strong></li>
+            </ol>
+            <h2>Blackjack Rules</h2> To learn more about how to play Blackjack, you can find the rules <a
+                href="https://en.wikipedia.org/wiki/Blackjack" target="_blank"><strong>here</strong></a>.
+            <br><br>
+
+
+        </div>
+    </div>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script src="blackjack.js"></script>
+
+
+
+
 </body>
 
 </html>

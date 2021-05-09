@@ -1,0 +1,446 @@
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("images/bg-2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #cccccc;
+    font-family: "Open Sans", sans-serif;
+}
+
+header, footer {
+    position: relative;
+    width: 100%;
+    height: 50px;
+}
+
+#game-title, #start-game {
+    float: left;
+    width: calc(100%/3);
+    padding-left: 15px;
+}
+
+#start-game {
+    padding-left: 40px;
+    margin-top: -120px;
+    text-align: left;
+}
+
+#empty {
+    float: left;
+    width: calc(100%/3);
+    height: 50px;
+}
+
+.score {
+    float: left;
+    width: calc(100%/3);
+    text-align: center;
+}
+
+#user-controls {
+    float: left;
+    padding-right: 15px;
+    margin-top: 2px;
+    width: calc(100%/3);
+    text-align: right;
+}
+
+#mute {
+    width: 85px;
+}
+
+#player-buttons {
+    float: left;
+    width: calc(100%/3); 
+    margin-top: -120px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+
+main {
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+#game-title img {
+    float: left;
+    height: 40px;
+    margin-top: 7px;
+}
+
+#message-box-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+   /*border-top: 4px orange solid;*/
+    
+}
+
+.border {
+    position: absolute;
+    width: 100%;
+    border-top: 5px #2E2E2E ridge;
+    z-index: 12;
+    box-shadow: 1px 4px 4px #003504;
+}
+
+#message-box {
+    position: relative;
+    padding: 10px 50px;
+    background-color: #30373B;
+    color: #fff;
+    border: 5px #2E2E2E ridge;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 4px 4px #003504;
+    text-align: center;
+    z-index: 13;
+    
+}
+
+h1 {
+    display:inline;
+    float: left;
+    margin:0;
+    padding:0;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Button Styling */
+.button {
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 30px;
+    padding: 10px 15px 25px 15px;
+    border: none;
+    border-radius: 5px;
+    display:inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+.button-wide {
+    margin-top: 5px;
+    margin-right: 5px;
+    height: 30px;
+    padding: 7px 30px 33px 30px;
+    border: none;
+    border-radius: 5px;
+    display:inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button-round {
+    margin-top: 5px;
+    margin-right: 15px;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    display:inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 2px 5px 4px #003504;
+}
+
+button {
+    transition: all 0.3s ease 0s
+}
+
+button:hover {
+     filter: brightness(90%);
+}
+
+
+/* Colors */
+.yellow {
+    background-color: #e8d60d !important;
+}
+
+.grey {
+    background-color: #353d42;
+}
+
+.blue {
+    background-color: #069fff;
+}
+
+.green {
+    background-color: #09cf2a !important;
+}
+
+.red {
+    background-color: #cf091c !important;
+}
+
+.purple {
+    background-color: #9933CC !important;
+}
+
+.lightgrey {
+    background-color: lightgrey;
+}
+
+.text-yellow {
+    color: #e8d60d;
+}
+
+.text-blue {
+    color: #069fff;
+}
+
+.text-green {
+    color: #09cf2a;
+}
+
+.text-red {
+    color: #cf091c;
+}
+
+.text-grey {
+    color: #353d42;
+}
+
+.text-white {
+    color: #fff;
+}
+
+/* Card Styling */
+
+main img {
+    width: calc(500px/5);
+}
+
+#deck {
+    position: absolute;
+    width: calc(500px/5);
+    height: calc(726px/5);
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in;
+    /*display: none;*/
+}
+
+#deck-outline {
+    position: absolute;
+    width: calc(500px/5);
+    height: calc(726px/5);
+    box-shadow: inset 0px 0px 0px 3px #e8d60d;
+    border-radius: 5px;
+}
+
+#deck:hover {
+    filter: brightness(90%);
+}
+
+#deck img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+ #deck .card-face {
+    transform: rotateY( 180deg );
+}
+
+.deck-orientation {
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    transform: rotateZ( 125deg );
+}
+
+.deck-shadow {
+    box-shadow: 7px -7px 3px #003504;
+    border-radius: 5px;
+}
+
+.card-back {
+    z-index: -2;
+}
+
+/* Hand section styling */
+
+#dealer-hand, #player-hand {
+    box-shadow: inset 0px 0px 0px 3px #e8d60d;
+    border-radius: 5px;
+}
+
+#player-hand img, #dealer-hand img {
+    margin-left: -70px;
+}
+
+#player-hand img:first-child, #dealer-hand img:first-child {
+    margin-left: 0px;
+}
+
+#hide-card img {
+    position: absolute;
+    margin-left: -100px;
+    display: none;
+    z-index: 4;
+}
+
+#dealer-hand-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: calc(726px/5);
+    /*background-color: blue;*/
+    z-index: -3;
+}
+
+#player-hand-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 110px;
+    width: 100%;
+    height: calc(726px/5);
+    /*background-color: red;*/
+    z-index: -4;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 20; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    display: block;
+    position: absolute;
+    top: calc(50vh - (196.81px/2));
+    left: calc(50% - (500px/2));
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animateFadeIn;
+    animation-duration: 1s;
+}
+
+#about-modal .modal-content {
+    display: block;
+    position: absolute;
+    top: calc(50vh - (556.44px/2));
+    left: calc(50% - (600px/2));
+    padding: 20px;
+    margin: auto;
+    width: 600px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: lightgrey;
+    color: white;
+    
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding-top: 0;
+    border-radius: 0 0 10px 10px;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+}
+
+#response-no {
+    float: left;
+    height: 100%;
+    width: 50%;
+    padding: 7px;
+    background-color: lightgrey;
+    color: black;
+    border: 1px solid grey;
+    border-bottom: none;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    transition: background-color 0.2s linear;
+}
+
+#response-yes {
+    float: left;
+    height: 100%;
+    width: 50%;
+    padding: 7px;
+    background-color: #2A8EFF;
+    border: 1px solid grey;
+    border-bottom: none;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    transition: background-color 0.2s linear;
+}
+
+#response-no:hover, #response-yes:hover {
+    filter: brightness(80%);
+}
+
+
+/* Add Animation */
+@keyframes animateFadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
